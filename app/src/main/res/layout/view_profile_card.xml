@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="250dp"
+    app:cardBackgroundColor="#1C1B1F">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageRoundB"
+            style="@style/RoundedImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="16dp"
+            android:background="@color/md_theme_light_inversePrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundedImage"
+            tools:background="@color/md_theme_light_inversePrimary">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="28dp"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="#1C1B1F"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:text="Evolitist"
+            android:textColor="#E6E1E5"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/imageRoundB"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subhead"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="just do it."
+            android:textColor="#E6E1E5"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageRoundB"
+            app:layout_constraintTop_toBottomOf="@+id/head" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:dividerColor="#49454F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subhead" />
+
+        <LinearLayout
+            android:id="@+id/linLayBig"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <LinearLayout
+                style="@style/LinLaySmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/divider1">
+
+                <TextView
+                    android:id="@+id/countIMG"
+                    style="@style/TextViewNum"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/descriptionIMG"
+                    style="@style/TextViewText"
+                    android:layout_width="wrap_content"
+                    android:text="images" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinLaySmall">
+
+                <TextView
+                    android:id="@+id/countSubs"
+                    style="@style/TextViewNum"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/descriptionSubs"
+                    style="@style/TextViewText"
+                    android:text="subscribers" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinLaySmall">
+
+                <TextView
+                    android:id="@+id/countPost"
+                    style="@style/TextViewNum"
+                    android:text="16" />
+
+                <TextView
+                    android:id="@+id/descriptionPost"
+                    style="@style/TextViewText"
+                    android:text="posts" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="#49454F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linLayBig" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Subscribe"
+            android:textColor="#E8DEF8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
