@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="380dp"
-    android:layout_height="250dp"
-    app:cardBackgroundColor="#1C1B1F">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/colorBackground"
+    android:id="@+id/ViewProfile"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?android:attr/colorBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,11 +18,11 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_margin="16dp"
-            android:background="@color/md_theme_light_inversePrimary"
+            android:background="?attr/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearance="@style/RoundedImage"
-            tools:background="@color/md_theme_light_inversePrimary">
+            >
 
         </com.google.android.material.imageview.ShapeableImageView>
 
@@ -30,45 +32,43 @@
             android:layout_margin="28dp"
             android:gravity="center"
             android:text="E"
-            android:textColor="#1C1B1F"
+            android:textColor="?attr/colorPrimaryInverse"
             android:textSize="32sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/head"
+            android:id="@+id/userName"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:maxLines="1"
-            android:text="Evolitist"
-            android:textColor="#E6E1E5"
+            android:text="@string/user_name"
+            android:textColor="?attr/colorSurfaceInverse"
             android:textSize="22sp"
             app:layout_constraintStart_toEndOf="@+id/imageRoundB"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/subhead"
+            android:id="@+id/userStatus"
             android:layout_width="0dp"
             android:layout_height="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:maxLines="1"
-            android:text="just do it."
-            android:textColor="#E6E1E5"
+            android:text="@string/user_status"
+            android:textColor="?attr/colorSurfaceInverse"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageRoundB"
-            app:layout_constraintTop_toBottomOf="@+id/head" />
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/DividerStyle"
             android:layout_marginTop="32dp"
-            app:dividerColor="#49454F"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/subhead" />
+            app:layout_constraintTop_toBottomOf="@+id/userStatus" />
 
         <LinearLayout
             android:id="@+id/linLayBig"
@@ -79,9 +79,7 @@
             app:layout_constraintTop_toBottomOf="@+id/divider1">
 
             <LinearLayout
-                style="@style/LinLaySmall"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/divider1">
+                style="@style/LinLaySmall">
 
                 <TextView
                     android:id="@+id/countIMG"
@@ -92,7 +90,7 @@
                     android:id="@+id/descriptionIMG"
                     style="@style/TextViewText"
                     android:layout_width="wrap_content"
-                    android:text="images" />
+                    android:text="@string/img_text" />
 
             </LinearLayout>
 
@@ -106,7 +104,7 @@
                 <TextView
                     android:id="@+id/descriptionSubs"
                     style="@style/TextViewText"
-                    android:text="subscribers" />
+                    android:text="@string/subs_text" />
 
             </LinearLayout>
 
@@ -120,7 +118,7 @@
                 <TextView
                     android:id="@+id/descriptionPost"
                     style="@style/TextViewText"
-                    android:text="posts" />
+                    android:text="@string/post_text" />
 
             </LinearLayout>
 
@@ -128,22 +126,26 @@
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:dividerColor="#49454F"
+            style="@style/DividerStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linLayBig" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:backgroundTint="?attr/colorPrimary"
+            android:id="@+id/btnSubscribe"
             android:layout_margin="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Subscribe"
-            android:textColor="#E8DEF8"
+            android:gravity="center"
+            android:text="@string/subscribe"
+            android:textColor="?attr/colorPrimaryInverse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider2" />
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
