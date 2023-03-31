@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="380dp"
-    android:layout_height="597dp"
-    app:cardBackgroundColor="#1C1B1F">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?android:attr/colorBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,11 +15,10 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_margin="16dp"
-            android:background="@color/md_theme_light_inversePrimary"
+            android:background="?attr/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearance="@style/RoundedImage"
-            tools:background="@color/md_theme_light_inversePrimary" />
+            app:shapeAppearance="@style/RoundedImage" />
 
         <TextView
             android:layout_width="40dp"
@@ -28,7 +26,7 @@
             android:layout_margin="16dp"
             android:gravity="center"
             android:text="E"
-            android:textColor="#1C1B1F"
+            android:textColor="?attr/colorPrimaryInverse"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,10 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
             android:layout_marginTop="16dp"
-            android:letterSpacing="0.1px"
             android:maxLines="1"
-            android:text="Evolitist"
-            android:textColor="#E6E1E5"
+            android:text="@string/user_name"
+            android:textColor="?attr/colorSurfaceInverse"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -53,65 +50,61 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
             android:layout_marginTop="40dp"
-            android:letterSpacing="0.4px"
             android:maxLines="1"
-            android:text="Apr 1, 2022 20:00:04"
-            android:textColor="#E6E1E5"
+            android:text="@string/publication_date"
+            android:textColor="?attr/colorSurfaceInverse"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/DividerStyle"
             android:layout_marginTop="16dp"
-            app:dividerColor="#49454F"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subheader" />
 
         <TextView
-            android:id="@+id/supportingText"
+            android:id="@+id/supportingPostText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:letterSpacing="0.25px"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-            android:textColor="#CAC4D0"
+            android:text="@string/post_description"
+            android:textColor="?attr/colorSurfaceInverse"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
 
         <ImageView
             android:id="@+id/mediaPager"
-            android:layout_width="380dp"
-            android:layout_height="380dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:src="@drawable/media"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/supportingText" />
+            app:layout_constraintTop_toBottomOf="@+id/supportingPostText" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="74dp"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_margin="16dp"
-            android:backgroundTint="#1C1B1F"
+            android:backgroundTint="?android:attr/colorBackground"
             android:paddingStart="16dp"
             android:paddingEnd="24dp"
             android:text="2"
-            android:textColor="#D0BCFF"
+            android:textColor="?attr/colorPrimary"
             app:cornerRadius="100px"
             app:icon="@drawable/icon"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconSize="18dp"
-            app:iconTint="#D0BCFF"
+            app:iconTint="?attr/colorPrimary"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mediaPager"
-            app:strokeColor="#938F99" />
+            app:strokeColor="?attr/colorOutline" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

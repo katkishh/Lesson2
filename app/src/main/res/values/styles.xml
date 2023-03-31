@@ -5,13 +5,19 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="dividerColor">?attr/colorSurfaceVariant</item>
+    </style>
+
     <style name="TextViewNum">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">36dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">28sp</item>
-        <item name="android:textColor">#E6E1E5</item>
+        <item name="android:textColor">?attr/colorSurfaceInverse</item>
     </style>
 
     <style name="TextViewText">
@@ -20,7 +26,7 @@
         <item name="android:layout_height">16dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textColor">#E6E1E5</item>
+        <item name="android:textColor">?attr/colorSurfaceInverse</item>
     </style>
 
     <style name="LinLaySmall">
