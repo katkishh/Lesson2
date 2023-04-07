@@ -1,74 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="380dp"
-    android:layout_height="152dp"
-    app:cardBackgroundColor="#1C1B1F"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?android:attr/colorBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textIMG"
+            android:id="@+id/textViewIMGText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Images"
-            android:textSize="14sp"
-            android:layout_marginTop="18dp"
             android:layout_marginStart="16dp"
-            android:textColor="#E6E1E5"
-            android:letterSpacing="0.1px"
-            />
+            android:layout_marginTop="18dp"
+            android:text="Images"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/buttonIMG"
+            android:id="@+id/imageButtonToImages"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/chevron_right"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="18dp"
-            android:background="80FFFFFF"
-            android:layout_marginRight="16dp"
-            />
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="?android:attr/colorBackground"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textIMG"
-            android:layout_marginTop="18dp">
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText">
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewFirstImage"
+                style="@style/SmoothRectIMG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                style="@style/SmoothRectIMG"
-                />
+                android:layout_marginStart="16dp" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/imageViewSecondImage"
                 style="@style/SmoothRectIMG"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/imageViewThirdImage"
                 style="@style/SmoothRectIMG"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewLastImage"
+                style="@style/SmoothRectIMG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/SmoothRectIMG"
-                android:layout_marginRight="16dp"
-                />
+                android:layout_marginEnd="16dp" />
 
         </LinearLayout>
 
