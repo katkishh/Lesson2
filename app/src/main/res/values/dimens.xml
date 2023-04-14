@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_round_size_post">40dp</dimen>
+    <dimen name="image_round_size_profile">64dp</dimen>
+    <dimen name="initial_size">40dp</dimen>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lesson2</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="user_name">Evolitist</string>
+    <string name="img_text">images</string>
+    <string name="post_text">posts</string>
+    <string name="subs_text">subscribers</string>
+    <string name="publication_date">Apr 1, 2022 20:00:04</string>
+    <string name="post_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+    <string name="user_status">just do it.</string>
+    <string name="profile">Profile</string>
+    <string name="name_initial">E</string>
+    <string name="text12">12</string>
+    <string name="text5">5</string>
+    <string name="text16">16</string>
+    <string name="text2">2</string>
+</resources>
