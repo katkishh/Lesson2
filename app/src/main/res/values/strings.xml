@@ -10,4 +10,9 @@
     <string name="post_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
     <string name="user_status">just do it.</string>
     <string name="profile">Profile</string>
+    <string name="name_initial">E</string>
+    <string name="text12">12</string>
+    <string name="text5">5</string>
+    <string name="text16">16</string>
+    <string name="text2">2</string>
 </resources>

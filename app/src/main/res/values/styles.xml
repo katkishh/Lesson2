@@ -10,12 +10,10 @@
         <item name="android:layout_height">36dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">28sp</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="TextViewText">
-        <item name="android:textSize">12sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">16dp</item>
         <item name="android:layout_gravity">center</item>
@@ -23,18 +21,9 @@
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
-    <style name="LinLaySmall">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:paddingTop">14dp</item>
-        <item name="android:paddingBottom">14dp</item>
-    </style>
-
     <style name="SmoothRectIMG">
         <item name="android:src">@drawable/media_small</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">18dp</item>
         <item name="android:layout_marginStart">8dp</item>
         <item name="android:layout_marginBottom">16dp</item>
     </style>

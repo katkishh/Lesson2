@@ -2,8 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardBackgroundColor="?android:attr/colorBackground">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,8 +15,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="18dp"
             android:text="Images"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
             android:textColor="?attr/colorOnBackground"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,41 +31,51 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewFirstImage"
+            style="@style/SmoothRectIMG"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewSecondImage"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText">
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageViewFirstImage"
-                style="@style/SmoothRectIMG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewSecondImage"
+            style="@style/SmoothRectIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewThirdImage"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFirstImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageViewSecondImage"
-                style="@style/SmoothRectIMG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewThirdImage"
+            style="@style/SmoothRectIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewLastImage"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/imageViewSecondImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageViewThirdImage"
-                style="@style/SmoothRectIMG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageViewLastImage"
-                style="@style/SmoothRectIMG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp" />
-
-        </LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewLastImage"
+            style="@style/SmoothRectIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/imageViewThirdImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
