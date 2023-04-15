@@ -31,49 +31,49 @@ class ViewProfile @JvmOverloads constructor(
             defStyleRes = 0
         ){
             getString(R.styleable.ViewProfile_userName)?.let { userName ->
-                binding.userName.text = userName
+                binding.textViewUserName.text = userName
             }
             getString(R.styleable.ViewProfile_userStatus)?.let { userStatus ->
-                binding.userStatus.text = userStatus
+                binding.textViewUserStatus.text = userStatus
             }
             getInt(R.styleable.ViewProfile_IMGNum, 0).let { IMGNum ->
-                binding.countIMG.text = IMGNum.toString()
+                binding.textViewIMGNum.text = IMGNum.toString()
             }
             getInt(R.styleable.ViewProfile_subsNum, 0).let { subsNum ->
-                binding.countSubs.text = subsNum.toString()
+                binding.textViewSubsNum.text = subsNum.toString()
             }
             getInt(R.styleable.ViewProfile_postsNum, 0).let { postsNum ->
-                binding.countPost.text = postsNum.toString()
+                binding.textViewPostsNum.text = postsNum.toString()
             }
             getColor(R.styleable.ViewProfile_btnColor, 0x6750A4.toInt()).let { btnColor ->
-                binding.btnSubscribe.setBackgroundColor(btnColor)
+                binding.buttonSubscribe.setBackgroundColor(btnColor)
 
             }
         }
     }
 
     fun setUserName(text: String){
-        binding.userName.text = text
+        binding.textViewUserName.text = text
     }
 
     fun setUserStatus(text: String){
-        binding.userStatus.text = text
+        binding.textViewUserStatus.text = text
     }
 
     fun setIMGNum(num: Int){
-        binding.countIMG.text = num.toString()
+        binding.textViewIMGNum.text = num.toString()
     }
 
     fun setSubsNum(num: Int){
-        binding.countSubs.text = num.toString()
+        binding.textViewSubsNum.text = num.toString()
     }
 
     fun setPostsNum(num: Int){
-        binding.countPost.text = num.toString()
+        binding.textViewPostsNum.text = num.toString()
     }
 
     fun setBtnColor(@ColorRes color: Int){
-        binding.btnSubscribe.setBackgroundColor(
+        binding.buttonSubscribe.setBackgroundColor(
             ContextCompat.getColor(context, color)
         )
     }
