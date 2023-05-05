@@ -11,8 +11,8 @@
     <string name="user_status">just do it.</string>
     <string name="profile">Profile</string>
     <string name="name_initial">E</string>
-    <string name="text12">12</string>
-    <string name="text5">5</string>
-    <string name="text16">16</string>
-    <string name="text2">2</string>
+    <string name="images_amount">12</string>
+    <string name="subs_amount">5</string>
+    <string name="posts_amount">16</string>
+    <string name="like_amount">2</string>
 </resources>

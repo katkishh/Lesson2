@@ -3,28 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingStart="16dp"
-    android:paddingEnd="16dp"
     android:paddingTop="16dp"
+    android:paddingEnd="16dp"
     android:paddingBottom="16dp"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <com.example.lesson2.ViewProfile
-        android:backgroundTint="?android:attr/colorBackground"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/ViewProfile"
-        />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <include
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/userImages"
         layout="@layout/view_images_card"
-        android:layout_marginTop="16dp"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 
     <include
         android:id="@+id/card"

@@ -15,20 +15,17 @@ class ViewProfile @JvmOverloads constructor(
     defAttributeSet: Int = 0,
 ) : MaterialCardView(context, attributeSet, defAttributeSet){
 
-    private lateinit var binding: ViewProfileCardBinding
+    private val binding by lazy {
+       ViewProfileCardBinding.inflate(
+           LayoutInflater.from(context),
+           this
+       )
+    }
 
     init{
-        binding = ViewProfileCardBinding.inflate(
-            LayoutInflater.from(context),
-            this,
-            true
-        )
-
         context.withStyledAttributes(
             attributeSet,
-            R.styleable.ViewProfile,
-            defAttributeSet,
-            defStyleRes = 0
+            R.styleable.ViewProfile
         ){
             getString(R.styleable.ViewProfile_userName)?.let { userName ->
                 binding.textViewUserName.text = userName
