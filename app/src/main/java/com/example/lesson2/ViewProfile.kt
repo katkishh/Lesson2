@@ -12,7 +12,7 @@ import com.google.android.material.card.MaterialCardView
 class ViewProfile @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null,
-    defAttributeSet: Int = 0,
+    defAttributeSet: Int = R.attr.myStyle,
 ) : MaterialCardView(context, attributeSet, defAttributeSet){
 
     private val binding by lazy {
@@ -42,9 +42,8 @@ class ViewProfile @JvmOverloads constructor(
             getInt(R.styleable.ViewProfile_postsNum, 0).let { postsNum ->
                 binding.textViewPostsNum.text = postsNum.toString()
             }
-            getColor(R.styleable.ViewProfile_btnColor, 0x6750A4.toInt()).let { btnColor ->
+            getColor(R.styleable.ViewProfile_btnColor, com.google.android.material.R.attr.colorPrimaryInverse).let { btnColor ->
                 binding.buttonSubscribe.setBackgroundColor(btnColor)
-
             }
         }
     }

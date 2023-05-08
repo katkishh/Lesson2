@@ -9,4 +9,6 @@
         <attr name="btnColor" format="color"/>
 
     </declare-styleable>
+
+    <attr name="myStyle" format="reference"/>
 </resources>
